@@ -1,0 +1,4 @@
+1. IP_self 为可调用模块及工程文件
+2. 将各工程所需IP文件夹已定位到工程文件夹内
+3. camera_demo仅有摄像头驱动，image_demo有图像处理相关（demo内是灰度处理，项目应是HSV转换）
+4. 各种图像转换模块均在 IP_self/Image-Process-IP 内
