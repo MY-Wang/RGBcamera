@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jul 28 16:57:40 2020
+# Process ID: 14720
+# Current directory: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/impl_1
+# Command line: vivado.exe -log RGB_led.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RGB_led.tcl -notrace
+# Log file: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/impl_1/RGB_led.vdi
+# Journal file: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source RGB_led.tcl -notrace

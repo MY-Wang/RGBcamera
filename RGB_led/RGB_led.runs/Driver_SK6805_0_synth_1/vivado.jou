@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jul 28 16:38:09 2020
+# Process ID: 14408
+# Current directory: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/Driver_SK6805_0_synth_1
+# Command line: vivado.exe -log Driver_SK6805_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Driver_SK6805_0.tcl
+# Log file: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/Driver_SK6805_0_synth_1/Driver_SK6805_0.vds
+# Journal file: F:/Vivado/pro_RGBcamera/RGB_led/RGB_led.runs/Driver_SK6805_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Driver_SK6805_0.tcl -notrace
