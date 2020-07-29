@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jul 26 16:09:25 2020
+# Process ID: 15208
+# Current directory: D:/xilinx/Camera_Demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13236 D:\xilinx\Camera_Demo\Camera_Demo.xpr
+# Log file: D:/xilinx/Camera_Demo/vivado.log
+# Journal file: D:/xilinx/Camera_Demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/xilinx/Camera_Demo/Camera_Demo.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Camera_Demo' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] impl_1 strategy "Vivado Implementation Defaults," step write_bitstream, attribute : Could not find the file 'E:/FPGA-Demo-Project/Camera_Demo/tcl/Elimate_Constraints_Error.tcl'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/xilinx/Camera_Demo/IP_Core'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2020/xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'RAM_Line' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'RAM_Line' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'AXIS_Data_RAM' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'AXIS_Data_RAM' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_0' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_1' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_1' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Runs 36-536] Adding Tcl hook script file E:/FPGA-Demo-Project/Camera_Demo/tcl/Elimate_Constraints_Error.tcl to utils_1 fileset.
+INFO: [Runs 36-535] Tcl hook script file E:/FPGA-Demo-Project/Camera_Demo/tcl/Elimate_Constraints_Error.tcl does not exist.
+INFO: [Project 1-230] Project 'Camera_Demo.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:42 . Memory (MB): peak = 757.598 ; gain = 189.957
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+set_property STEPS.WRITE_BITSTREAM.TCL.PRE {} [get_runs impl_1]
+upgrade_ip [get_ips  {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -log ip_upgrade.log
+Upgrading 'AXIS_Data_RAM'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [IP_Flow 19-3422] Upgraded AXIS_Data_RAM (Block Memory Generator 8.4) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'AXIS_Data_RAM'...
+Upgrading 'RAM_Line'
+INFO: [IP_Flow 19-3422] Upgraded RAM_Line (Block Memory Generator 8.4) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'RAM_Line'...
+Upgrading 'clk_wiz_0'
+INFO: [Project 1-386] Moving file 'D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded clk_wiz_0 (Clocking Wizard 6.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+Upgrading 'clk_wiz_1'
+INFO: [Project 1-386] Moving file 'D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci' from fileset 'clk_wiz_1' to fileset 'sources_1'.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT2_REQUESTED_OUT_FREQ' from '100.000' to '400.000' has been ignored for IP 'clk_wiz_1'
+INFO: [IP_Flow 19-3422] Upgraded clk_wiz_1 (Clocking Wizard 6.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_1'...
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'clk_wiz_1' has identified issues that may require user intervention. Please review the upgrade log 'd:/xilinx/Camera_Demo/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/xilinx/Camera_Demo/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 979.305 ; gain = 187.816
+export_ip_user_files -of_objects [get_ips {AXIS_Data_RAM RAM_Line clk_wiz_0 clk_wiz_1}] -no_script -sync -force -quiet
+generate_target all [get_files  {D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.xci D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.xci D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'AXIS_Data_RAM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'AXIS_Data_RAM'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'AXIS_Data_RAM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'AXIS_Data_RAM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'RAM_Line'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'RAM_Line'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'RAM_Line'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'RAM_Line'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_1'...
+generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 982.445 ; gain = 3.141
+catch { config_ip_cache -export [get_ips -all AXIS_Data_RAM] }
+catch { config_ip_cache -export [get_ips -all RAM_Line] }
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+catch { config_ip_cache -export [get_ips -all clk_wiz_1] }
+export_ip_user_files -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci]
+launch_runs -jobs 2 {AXIS_Data_RAM_synth_1 RAM_Line_synth_1 clk_wiz_0_synth_1 clk_wiz_1_synth_1}
+[Sun Jul 26 16:17:27 2020] Launched AXIS_Data_RAM_synth_1, RAM_Line_synth_1, clk_wiz_0_synth_1, clk_wiz_1_synth_1...
+Run output will be captured here:
+AXIS_Data_RAM_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/AXIS_Data_RAM_synth_1/runme.log
+RAM_Line_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/RAM_Line_synth_1/runme.log
+clk_wiz_0_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/clk_wiz_0_synth_1/runme.log
+clk_wiz_1_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1004.285 ; gain = 8.684
+export_simulation -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.xci] -directory D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.xci] -directory D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -directory D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/Camera_Demo/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/Camera_Demo/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs synth_1 -jobs 2
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'csi_to_axis_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'csi2_d_phy_rx_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rgb2dvi_0'...
+[Sun Jul 26 16:18:22 2020] Launched csi_to_axis_0_synth_1, csi2_d_phy_rx_0_synth_1, rgb2dvi_0_synth_1, AXIS_Data_RAM_synth_1, RAM_Line_synth_1, clk_wiz_0_synth_1, clk_wiz_1_synth_1...
+Run output will be captured here:
+csi_to_axis_0_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/csi_to_axis_0_synth_1/runme.log
+csi2_d_phy_rx_0_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/csi2_d_phy_rx_0_synth_1/runme.log
+rgb2dvi_0_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/rgb2dvi_0_synth_1/runme.log
+AXIS_Data_RAM_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/AXIS_Data_RAM_synth_1/runme.log
+RAM_Line_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/RAM_Line_synth_1/runme.log
+clk_wiz_0_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/clk_wiz_0_synth_1/runme.log
+clk_wiz_1_synth_1: D:/xilinx/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1/runme.log
+[Sun Jul 26 16:18:25 2020] Launched synth_1...
+Run output will be captured here: D:/xilinx/Camera_Demo/Camera_Demo.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Sun Jul 26 16:24:05 2020] Launched impl_1...
+Run output will be captured here: D:/xilinx/Camera_Demo/Camera_Demo.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Jul 26 16:25:44 2020] Launched impl_1...
+Run output will be captured here: D:/xilinx/Camera_Demo/Camera_Demo.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7s15ftgb196-1
+Top: Camera_Demo
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1144.582 ; gain = 66.418
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Camera_Demo' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Camera_Demo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (2#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Driver_MIPI' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_MIPI.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (3#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'csi2_d_phy_rx_0' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/csi2_d_phy_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'csi2_d_phy_rx_0' (4#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/csi2_d_phy_rx_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'Data_Read' of module 'csi2_d_phy_rx_0' requires 33 connections, but only 25 given [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_MIPI.v:75]
+INFO: [Synth 8-6157] synthesizing module 'csi_to_axis_0' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/csi_to_axis_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'csi_to_axis_0' (5#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/csi_to_axis_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Driver_Csi_To_Dvp' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_Csi_To_Dvp.v:23]
+	Parameter Default_AXIS_TREADY bound to: 1'b1 
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter HSIZE bound to: 1280 - type: integer 
+	Parameter HFP bound to: 1390 - type: integer 
+	Parameter HSP bound to: 1430 - type: integer 
+	Parameter HMAX bound to: 1650 - type: integer 
+	Parameter VSIZE bound to: 720 - type: integer 
+	Parameter VFP bound to: 725 - type: integer 
+	Parameter VSP bound to: 730 - type: integer 
+	Parameter VMAX bound to: 750 - type: integer 
+	Parameter HSPP bound to: 0 - type: integer 
+	Parameter VSPP bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXIS_Data_RAM' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/AXIS_Data_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXIS_Data_RAM' (6#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/AXIS_Data_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_Csi_To_Dvp' (7#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_Csi_To_Dvp.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_Bayer_To_RGB' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_Bayer_To_RGB.v:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter HSIZE bound to: 1280 - type: integer 
+	Parameter HFP bound to: 1390 - type: integer 
+	Parameter HSP bound to: 1430 - type: integer 
+	Parameter HMAX bound to: 1650 - type: integer 
+	Parameter VSIZE bound to: 720 - type: integer 
+	Parameter VFP bound to: 725 - type: integer 
+	Parameter VSP bound to: 730 - type: integer 
+	Parameter VMAX bound to: 750 - type: integer 
+	Parameter HSPP bound to: 0 - type: integer 
+	Parameter VSPP bound to: 0 - type: integer 
+	Parameter DELAY_LINE bound to: 2 - type: integer 
+	Parameter ST_IDLE bound to: 3'b000 
+	Parameter ST_IDLE_START bound to: 3'b001 
+	Parameter ST_PATTERN0 bound to: 3'b010 
+	Parameter ST_PATTERN1 bound to: 3'b011 
+	Parameter ST_IDLE_GR bound to: 3'b100 
+	Parameter ST_PATTERN2 bound to: 3'b101 
+	Parameter ST_PATTERN3 bound to: 3'b110 
+INFO: [Synth 8-6157] synthesizing module 'RAM_Line' [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/RAM_Line_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_Line' (8#1) [D:/xilinx/Camera_Demo/.Xil/Vivado-15208-DESKTOP-CBOB74N/realtime/RAM_Line_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_Bayer_To_RGB' (9#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_Bayer_To_RGB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_MIPI' (10#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_MIPI.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/2020/xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (11#1) [D:/2020/xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6157] synthesizing module 'OV5647_Init' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/OV5647_Init.v:23]
+	Parameter SLAVE_ADDRESS bound to: 8'b01101100 
+	Parameter INITIAL_NUM bound to: 8'b01011000 
+	Parameter REG_ADDR2_EN bound to: 1'b1 
+	Parameter WR_HOLD_T bound to: 4'b1010 
+	Parameter WR_VALID bound to: 1'b1 
+	Parameter WAIT_DELAY bound to: 20'b00011000011010100000 
+	Parameter IDLE bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter WAIT bound to: 2'b10 
+	Parameter END bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5647' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/OV5647_Init.v:243]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5647' (12#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/OV5647_Init.v:243]
+INFO: [Synth 8-6157] synthesizing module 'Trigger_Generator' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Trigger_Generator.v:23]
+	Parameter ST_WAIT bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_HOLD bound to: 2'b10 
+	Parameter ST_END bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'Trigger_Generator' (13#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Trigger_Generator.v:23]
+WARNING: [Synth 8-6014] Unused sequential element en_rd_rom_reg was removed.  [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/OV5647_Init.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'OV5647_Init' (14#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/OV5647_Init.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_IIC' [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_IIC.v:22]
+	Parameter System_Clk_MHz bound to: 13'b0000001100100 
+	Parameter Set_IIC_SCL_kHz bound to: 13'b0000001100100 
+	Parameter SCL_Divider bound to: 13'b0000000000001 
+	Parameter SCL_SUM bound to: 13'b0001111101000 
+	Parameter SCL_H_START bound to: 0 - type: integer 
+	Parameter SCL_H_CENTER bound to: 249 - type: integer 
+	Parameter SCL_L_START bound to: 499 - type: integer 
+	Parameter SCL_L_CENTER bound to: 749 - type: integer 
+	Parameter ST_IDLE bound to: 5'b00000 
+	Parameter ST_START bound to: 5'b00001 
+	Parameter ST_W_SADDR bound to: 5'b00010 
+	Parameter ST_ACK_0 bound to: 5'b00011 
+	Parameter ST_W_ADDR_H bound to: 5'b00100 
+	Parameter ST_ACK_1 bound to: 5'b00101 
+	Parameter ST_W_ADDR_L bound to: 5'b00110 
+	Parameter ST_ACK_2 bound to: 5'b00111 
+	Parameter ST_W_DATA bound to: 5'b01000 
+	Parameter ST_ACK_3 bound to: 5'b01001 
+	Parameter ST_START_R bound to: 5'b01010 
+	Parameter ST_W_SADDR_R bound to: 5'b01011 
+	Parameter ST_ACK_4 bound to: 5'b01100 
+	Parameter ST_R_DATA bound to: 5'b01101 
+	Parameter ST_NACK bound to: 5'b01110 
+	Parameter ST_STOP bound to: 5'b01111 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_IIC.v:388]
+WARNING: [Synth 8-5788] Register data_r_o_reg in module Driver_IIC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_IIC.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_IIC' (15#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Driver_IIC.v:22]
+WARNING: [Synth 8-3848] Net iic_read in module/entity Camera_Demo does not have driver. [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Camera_Demo.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'Camera_Demo' (16#1) [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Camera_Demo.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1191.934 ; gain = 113.770
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin MIPI_Camera_IIC:i_iic_read to constant 0 [D:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/new/Camera_Demo.v:127]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1191.934 ; gain = 113.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1191.934 ; gain = 113.770
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_10'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0.dcp' for cell 'Mini_HDMI_Driver'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'MIPI_Trans_Driver/camera_clock'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi2_d_phy_rx_0/csi2_d_phy_rx_0.dcp' for cell 'MIPI_Trans_Driver/Data_Read'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi_to_axis_0/csi_to_axis_0.dcp' for cell 'MIPI_Trans_Driver/Data_To_Csi'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/AXIS_Data_RAM/AXIS_Data_RAM.dcp' for cell 'MIPI_Trans_Driver/Driver_Csi_To_Dvp0/RAM_AXIS'
+INFO: [Project 1-454] Reading design checkpoint 'd:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/RAM_Line/RAM_Line.dcp' for cell 'MIPI_Trans_Driver/Driver_Bayer_To_RGB0/RAM_Line_Buff0'
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. MIPI_Trans_Driver/camera_clock/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Opt 31-140] Inserted 3 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'MIPI_Trans_Driver/camera_clock/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi_to_axis_0/hdl/csi_to_axis.xdc] for cell 'MIPI_Trans_Driver/Data_To_Csi/U0'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi_to_axis_0/hdl/csi_to_axis.xdc] for cell 'MIPI_Trans_Driver/Data_To_Csi/U0'
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi2_d_phy_rx_0/hdl/csi2_d_phy_rx.xdc] for cell 'MIPI_Trans_Driver/Data_Read/U0'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/csi2_d_phy_rx_0/hdl/csi2_d_phy_rx.xdc] for cell 'MIPI_Trans_Driver/Data_Read/U0'
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'Mini_HDMI_Driver/U0'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'Mini_HDMI_Driver/U0'
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_10/inst'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_10/inst'
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_10/inst'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_10/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Camera_Demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Camera_Demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'MIPI_Trans_Driver/camera_clock/inst'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'MIPI_Trans_Driver/camera_clock/inst'
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'MIPI_Trans_Driver/camera_clock/inst'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'MIPI_Trans_Driver/camera_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Camera_Demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Camera_Demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.336 ; gain = 0.000
+Parsing XDC File [D:/xilinx/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [D:/xilinx/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Camera_Demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Camera_Demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.336 ; gain = 0.000
+Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'Mini_HDMI_Driver/U0'
+Finished Parsing XDC File [d:/xilinx/Camera_Demo/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'Mini_HDMI_Driver/U0'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1355.336 ; gain = 277.172
+53 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.336 ; gain = 277.172

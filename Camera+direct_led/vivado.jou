@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jul 28 08:24:02 2020
+# Process ID: 16364
+# Current directory: D:/xilinx/RGBcamera
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3144 D:\xilinx\RGBcamera\Camera_Demo.xpr
+# Log file: D:/xilinx/RGBcamera/vivado.log
+# Journal file: D:/xilinx/RGBcamera\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/xilinx/RGBcamera/Camera_Demo.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+set_property -dict [list CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {10.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT2_DIVIDE {100} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT3_JITTER {209.588} CONFIG.CLKOUT3_PHASE_ERROR {98.575}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files D:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 2 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property  ip_repo_paths  {d:/xilinx/RGBcamera/IP_Core D:/xilinx/Lab/IP} [current_project]
+update_ip_catalog
+create_ip -name Driver_SK6805 -vendor xilinx.com -library user -version 1.0 -module_name Driver_SK6805_0 -dir d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip
+generate_target {instantiation_template} [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Driver_SK6805_0/Driver_SK6805_0.xci]
+generate_target all [get_files  d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Driver_SK6805_0/Driver_SK6805_0.xci]
+catch { config_ip_cache -export [get_ips -all Driver_SK6805_0] }
+export_ip_user_files -of_objects [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Driver_SK6805_0/Driver_SK6805_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Driver_SK6805_0/Driver_SK6805_0.xci]
+launch_runs -jobs 2 Driver_SK6805_0_synth_1
+export_simulation -of_objects [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Driver_SK6805_0/Driver_SK6805_0.xci] -directory D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+create_ip -name Clk_Division -vendor xilinx.com -library user -version 1.0 -module_name Clk_Division_0 -dir d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip
+generate_target {instantiation_template} [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Clk_Division_0/Clk_Division_0.xci]
+generate_target all [get_files  d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Clk_Division_0/Clk_Division_0.xci]
+catch { config_ip_cache -export [get_ips -all Clk_Division_0] }
+export_ip_user_files -of_objects [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Clk_Division_0/Clk_Division_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Clk_Division_0/Clk_Division_0.xci]
+launch_runs -jobs 2 Clk_Division_0_synth_1
+export_simulation -of_objects [get_files d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/Clk_Division_0/Clk_Division_0.xci] -directory D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/sim_scripts -ip_user_files_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files -ipstatic_source_dir D:/xilinx/RGBcamera/Camera_Demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/modelsim} {questa=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/questa} {riviera=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/riviera} {activehdl=D:/xilinx/RGBcamera/Camera_Demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close [ open D:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/new/count.v w ]
+add_files D:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/new/count.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
