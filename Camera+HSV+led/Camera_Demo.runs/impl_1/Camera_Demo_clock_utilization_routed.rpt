@@ -1,12 +1,13 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 28 21:28:33 2020
-| Host         : DESKTOP-CBOB74N running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Jul 29 17:21:01 2020
+| Host         : LAPTOP-CHGNO6TI running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Camera_Demo_clock_utilization_routed.rpt
 | Design       : Camera_Demo
 | Device       : 7s15-ftgb196
 | Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
 -----------------------------------------------------------------------------------------
 
 Clock Utilization Report
@@ -57,8 +58,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------+--------------------------------------------------------------------------+---------------------------------------------------------------+
 | g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 2 |         460 |               0 |       10.000 | clk_out1_clk_wiz_1 | MIPI_Trans_Driver/camera_clock/inst/clkout1_buf/O                        | MIPI_Trans_Driver/camera_clock/inst/clk_out1                  |
 | g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 2 |         281 |               0 |       19.044 | pclk               | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/usr_BUFG_inst/O         | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK          |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 1 |         150 |               0 |       10.000 | Multiple           | clk_10/inst/clkout1_buf/O                                                | clk_10/inst/clk_out1                                          |
-| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |         108 |               0 |        5.000 | Multiple           | clk_10/inst/clkout2_buf/O                                                | clk_10/inst/clk_out2                                          |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 2 |         274 |               0 |       10.000 | Multiple           | clk_10/inst/clkout1_buf/O                                                | clk_10/inst/clk_out1                                          |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 1 |         108 |               0 |        5.000 | Multiple           | clk_10/inst/clkout2_buf/O                                                | clk_10/inst/clk_out2                                          |
 | g4        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 1 |          86 |               0 |      100.000 | Multiple           | clk_10/inst/clkout3_buf/O                                                | clk_10/inst/clk_out3                                          |
 | g5        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 1 |          24 |               0 |              |                    | R_reg[7]_i_1/O                                                           | R0                                                            |
 | g6        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |           8 |               0 |       10.000 | PixelClkIO         | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG_inst/O      | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG  |
@@ -85,7 +86,7 @@ Table of Contents
 | src2      | g3        | MMCME2_ADV/CLKOUT1  | None         | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               5.000 | Multiple           | clk_10/inst/mmcm_adv_inst/CLKOUT1                                              | clk_10/inst/clk_out2_clk_wiz_0                             |
 | src2      | g4        | MMCME2_ADV/CLKOUT2  | None         | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |             100.000 | Multiple           | clk_10/inst/mmcm_adv_inst/CLKOUT2                                              | clk_10/inst/clk_out3_clk_wiz_0                             |
 | src2      | g11       | MMCME2_ADV/CLKFBOUT | None         | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              10.000 | Multiple           | clk_10/inst/mmcm_adv_inst/CLKFBOUT                                             | clk_10/inst/clkfbout_clk_wiz_0                             |
-| src3      | g5        | LUT6/O              | None         | SLICE_X17Y32    | X0Y0         |           1 |              25 |                     |                    | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/Mini_HDMI_Driver_i_25/O                 | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/set_y_o_reg[9]_0    |
+| src3      | g5        | LUT6/O              | None         | SLICE_X16Y30    | X0Y0         |           1 |              25 |                     |                    | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/Mini_HDMI_Driver_i_25/O                 | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/set_y_o_reg[9]_0    |
 | src4      | g6        | PLLE2_ADV/CLKOUT1   | None         | PLLE2_ADV_X0Y0  | X0Y0         |           1 |               0 |              10.000 | PixelClkIO         | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/GenPLL.DVI_ClkGenerator/CLKOUT1 | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/PixelClk    |
 | src4      | g7        | PLLE2_ADV/CLKOUT0   | None         | PLLE2_ADV_X0Y0  | X0Y0         |           1 |               0 |               2.000 | SerialClkIO        | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/GenPLL.DVI_ClkGenerator/CLKOUT0 | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/SerialClk   |
 | src5      | g8,       | BUFMRCE/O           | None         | BUFMRCE_X0Y1    | X0Y0         |           2 |               0 |               4.761 | dphy_hs_clock_p    | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/BUFMRCE_inst/O                | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/clk_bufmr |
@@ -103,8 +104,8 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    9 |    12 |    1 |     4 |    1 |     2 |    1 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    0 |    50 |  533 |   900 |  138 |   200 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X1Y0              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  508 |  1100 |  246 |   400 |    2 |    20 |    0 |    10 |    0 |    20 |
+| X0Y0              |    9 |    12 |    1 |     4 |    1 |     2 |    1 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    0 |    50 |  607 |   900 |  182 |   200 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y0              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  558 |  1100 |  206 |   400 |    2 |    20 |    0 |    10 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -128,17 +129,17 @@ All Modules
 +-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
 | g0        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |      10.000 | {0.000 5.000} |         456 |        0 |              1 |        0 | MIPI_Trans_Driver/camera_clock/inst/clk_out1 |
 +-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+
-|    | X0  | X1   |
-+----+-----+------+
-| Y0 |  52 |  405 |
-+----+-----+------+
++----+------+------+
+|    | X0   | X1   |
++----+------+------+
+| Y0 |  118 |  339 |
++----+------+------+
 
 
 7. Device Cell Placement Summary for Global Clock g1
@@ -149,7 +150,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------+
 | g1        | BUFG/O          | n/a               | pclk  |      19.044 | {0.000 9.522} |         280 |        0 |              1 |        0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -158,7 +159,7 @@ All Modules
 +----+------+-----+
 |    | X0   | X1  |
 +----+------+-----+
-| Y0 |  239 |  42 |
+| Y0 |  256 |  25 |
 +----+------+-----+
 
 
@@ -168,19 +169,19 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                  |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------+
-| g2        | BUFG/O          | n/a               | Multiple |      10.000 | {0.000 5.000} |         150 |        0 |              0 |        0 | clk_10/inst/clk_out1 |
+| g2        | BUFG/O          | n/a               | Multiple |      10.000 | {0.000 5.000} |         274 |        0 |              0 |        0 | clk_10/inst/clk_out1 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+----+
-|    | X0   | X1 |
-+----+------+----+
-| Y0 |  150 |  0 |
-+----+------+----+
++----+------+------+
+|    | X0   | X1   |
++----+------+------+
+| Y0 |  150 |  124 |
++----+------+------+
 
 
 9. Device Cell Placement Summary for Global Clock g3
@@ -191,7 +192,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------+
 | g3        | BUFG/O          | n/a               | Multiple |       5.000 | {0.000 2.500} |         108 |        0 |              0 |        0 | clk_10/inst/clk_out2 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -200,7 +201,7 @@ All Modules
 +----+------+----+
 |    | X0   | X1 |
 +----+------+----+
-| Y0 |  104 |  4 |
+| Y0 |  108 |  0 |
 +----+------+----+
 
 
@@ -212,7 +213,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+----------------+-------------+----------+----------------+----------+----------------------+
 | g4        | BUFG/O          | n/a               | Multiple |     100.000 | {0.000 50.000} |          86 |        0 |              0 |        0 | clk_10/inst/clk_out3 |
 +-----------+-----------------+-------------------+----------+-------------+----------------+-------------+----------+----------------+----------+----------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -233,7 +234,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----+
 | g5        | BUFG/O          | n/a               |       |             |               |          24 |        0 |              0 |        0 | R0  |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -254,7 +255,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------+
 | g6        | BUFG/O          | n/a               | PixelClkIO |      10.000 | {0.000 5.000} |           0 |        8 |              0 |        0 | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -275,7 +276,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------+
 | g7        | BUFG/O          | n/a               | SerialClkIO |       2.000 | {0.000 1.000} |           0 |        8 |              0 |        0 | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -296,7 +297,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------+
 | g8        | BUFR/O          | X0Y0              | pclk  |      19.044 | {0.000 9.522} |           1 |        2 |              1 |        0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/pclk |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -317,7 +318,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------+
 | g9        | BUFGCTRL/O      | n/a               | dphy_hs_clock_p |       4.761 | {0.000 2.380} |           0 |        0 |              1 |        0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/I |
 +-----------+-----------------+-------------------+-----------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -338,7 +339,7 @@ All Modules
 +-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------+
 | g10       | BUFG/O          | n/a               | clkfbout_clk_wiz_1 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | MIPI_Trans_Driver/camera_clock/inst/clkfbout_buf_clk_wiz_1 |
 +-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -359,7 +360,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
 | g11       | BUFG/O          | n/a               | Multiple |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | clk_10/inst/clkfbout_buf_clk_wiz_0 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
-* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
@@ -378,10 +379,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          52 |               0 |  42 |      9 |    0 |   0 |  0 |    0 |   1 |       0 | MIPI_Trans_Driver/camera_clock/inst/clk_out1               |
-| g1        | n/a   | BUFG/O          | None       |         239 |               0 | 238 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK       |
+| g0        | n/a   | BUFG/O          | None       |         118 |               0 |  95 |     22 |    0 |   0 |  0 |    0 |   1 |       0 | MIPI_Trans_Driver/camera_clock/inst/clk_out1               |
+| g1        | n/a   | BUFG/O          | None       |         256 |               0 | 255 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK       |
 | g2        | n/a   | BUFG/O          | None       |         150 |               0 | 150 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out1                                       |
-| g3        | n/a   | BUFG/O          | None       |         104 |               0 | 102 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out2                                       |
+| g3        | n/a   | BUFG/O          | None       |         108 |               0 | 106 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out2                                       |
 | g8        | n/a   | BUFR/O          | None       |           3 |               0 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/pclk      |
 | g9        | n/a   | BUFGCTRL/O      | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/I         |
 | g10       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | MIPI_Trans_Driver/camera_clock/inst/clkfbout_buf_clk_wiz_1 |
@@ -397,9 +398,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         405 |               0 | 377 |     24 |    2 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/camera_clock/inst/clk_out1                  |
-| g1        | n/a   | BUFG/O          | None       |          42 |               0 |  41 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK          |
-| g3        | n/a   | BUFG/O          | None       |           4 |               0 |   4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out2                                          |
+| g0        | n/a   | BUFG/O          | None       |         339 |               0 | 324 |     11 |    2 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/camera_clock/inst/clk_out1                  |
+| g1        | n/a   | BUFG/O          | None       |          25 |               0 |  24 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK          |
+| g2        | n/a   | BUFG/O          | None       |         124 |               0 | 124 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out1                                          |
 | g4        | n/a   | BUFG/O          | None       |          86 |               0 |  86 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_10/inst/clk_out3                                          |
 | g5        | n/a   | BUFG/O          | None       |          24 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | R0                                                            |
 | g6        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG  |
@@ -450,14 +451,14 @@ resize_pblock [get_pblocks {CLKAG_clk_10/inst/clk_out3}] -add {CLOCKREGION_X1Y0:
 #startgroup
 create_pblock {CLKAG_clk_10/inst/clk_out2}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk_10/inst/clk_out2}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_10/inst/clk_out2"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_10/inst/clk_out2}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_clk_10/inst/clk_out2}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
 #endgroup
 
 # Clock net "clk_10/inst/clk_out1" driven by instance "clk_10/inst/clkout1_buf" located at site "BUFGCTRL_X0Y5"
 #startgroup
 create_pblock {CLKAG_clk_10/inst/clk_out1}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk_10/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_10/inst/clk_out1"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_10/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+resize_pblock [get_pblocks {CLKAG_clk_10/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "R0" driven by instance "R_reg[7]_i_1" located at site "BUFGCTRL_X0Y7"

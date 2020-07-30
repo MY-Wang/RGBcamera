@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jul 29 16:59:20 2020
+# Process ID: 9584
+# Current directory: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/Clk_Division_0_synth_1
+# Command line: vivado.exe -log Clk_Division_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Clk_Division_0.tcl
+# Log file: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/Clk_Division_0_synth_1/Clk_Division_0.vds
+# Journal file: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/Clk_Division_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Clk_Division_0.tcl -notrace

@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 28 21:26:22 2020
-| Host         : DESKTOP-CBOB74N running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Jul 29 17:18:01 2020
+| Host         : LAPTOP-CHGNO6TI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Camera_Demo_utilization_synth.rpt -pb Camera_Demo_utilization_synth.pb
 | Design       : Camera_Demo
 | Device       : 7s15ftgb196-1
@@ -38,7 +38,7 @@ Table of Contents
 | Slice Registers            |  539 |     0 |     16000 |  3.37 |
 |   Register as Flip Flop    |  491 |     0 |     16000 |  3.07 |
 |   Register as Latch        |   48 |     0 |     16000 |  0.30 |
-| F7 Muxes                   |   18 |     0 |      4000 |  0.45 |
+| F7 Muxes                   |   21 |     0 |      4000 |  0.53 |
 | F8 Muxes                   |    0 |     0 |      2000 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -147,15 +147,15 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |  341 |        Flop & Latch |
 | FDCE     |  149 |        Flop & Latch |
-| LUT6     |  148 |                 LUT |
-| LUT3     |   84 |                 LUT |
-| LUT2     |   82 |                 LUT |
-| LUT5     |   70 |                 LUT |
+| LUT6     |  140 |                 LUT |
+| LUT3     |   87 |                 LUT |
+| LUT2     |   84 |                 LUT |
+| LUT5     |   72 |                 LUT |
 | LDCE     |   48 |        Flop & Latch |
-| LUT4     |   41 |                 LUT |
+| LUT4     |   43 |                 LUT |
 | SRL16E   |   33 |  Distributed Memory |
 | CARRY4   |   24 |          CarryLogic |
-| MUXF7    |   18 |               MuxFx |
+| MUXF7    |   21 |               MuxFx |
 | LUT1     |    8 |                 LUT |
 | IBUF     |    4 |                  IO |
 | OBUF     |    3 |                  IO |
@@ -175,8 +175,10 @@ Table of Contents
 | rgb2dvi_0       |    1 |
 | csi_to_axis_0   |    1 |
 | csi2_d_phy_rx_0 |    1 |
+| colorJudge_0    |    1 |
 | clk_wiz_1       |    1 |
 | clk_wiz_0       |    1 |
+| RGB_To_HSV_0    |    1 |
 | Driver_SK6805_0 |    1 |
 | Clk_Division_0  |    1 |
 | AXIS_Data_RAM   |    1 |

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jul 29 17:18:47 2020
+# Process ID: 3824
+# Current directory: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/impl_1
+# Command line: vivado.exe -log Camera_Demo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Camera_Demo.tcl -notrace
+# Log file: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/impl_1/Camera_Demo.vdi
+# Journal file: F:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Camera_Demo.tcl -notrace

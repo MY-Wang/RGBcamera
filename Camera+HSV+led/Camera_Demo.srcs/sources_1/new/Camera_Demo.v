@@ -91,9 +91,9 @@ module Camera_Demo(
         .o_clk_pixel(clk_pixel)
     );
     
-    reg [7:0] R = 0;
-    reg [7:0] G = 0;
-    reg [7:0] B = 0;
+    wire [7:0] R;
+    wire [7:0] G;
+    wire [7:0] B;
     judge judge0(
         .set_X(Set_X),
         .set_Y(Set_Y),
@@ -104,9 +104,9 @@ module Camera_Demo(
         .B(B)
         );
     
-    reg[8:0] H = 0;
-    reg[7:0] V = 0;
-    reg[7:0] S = 0;
+    wire[7:0] H;
+    wire[7:0] V;
+    wire[7:0] S;
     RGB_To_HSV_0 U0(
         .clk_Image_Process(clk_100MHz_system),
         .Rst(1),
@@ -119,9 +119,9 @@ module Camera_Demo(
         .Delay_Num()
         );
     
-    reg[7:0] Rin = 0;
-    reg[7:0] Gin = 0;
-    reg[7:0] Bin = 0;
+    wire[7:0] Rin;
+    wire[7:0] Gin;
+    wire[7:0] Bin;
     colorJudge_0 U1(
         .HSV_H(H),
         .HSV_S(S),

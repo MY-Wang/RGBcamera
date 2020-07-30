@@ -1,56 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1595942830">
+<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1596014318">
+  <File Type="BITSTR-BMM" Name="Camera_Demo_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Camera_Demo_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Camera_Demo_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="Camera_Demo_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Camera_Demo.tcl"/>
+  <File Type="OPT-TIMING" Name="Camera_Demo_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Camera_Demo_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="Camera_Demo_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Camera_Demo_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="Camera_Demo.msk"/>
-  <File Type="ROUTE-CLK" Name="Camera_Demo_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="Camera_Demo.vdi"/>
-  <File Type="BG-BIT" Name="Camera_Demo.bit"/>
-  <File Type="BG-DRC" Name="Camera_Demo.drc"/>
-  <File Type="BG-BGN" Name="Camera_Demo.bgn"/>
-  <File Type="BG-BIN" Name="Camera_Demo.bin"/>
-  <File Type="BITSTR-RBT" Name="Camera_Demo.rbt"/>
-  <File Type="BITSTR-NKY" Name="Camera_Demo.nky"/>
-  <File Type="BITSTR-BMM" Name="Camera_Demo_bd.bmm"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Camera_Demo_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MMI" Name="Camera_Demo.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Camera_Demo_methodology_drc_routed.pb"/>
-  <File Type="BITSTR-SYSDEF" Name="Camera_Demo.sysdef"/>
-  <File Type="ROUTE-DRC-RPX" Name="Camera_Demo_drc_routed.rpx"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Camera_Demo.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="Camera_Demo_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Camera_Demo.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Camera_Demo_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Camera_Demo_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Camera_Demo_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Camera_Demo_placed.dcp"/>
   <File Type="PLACE-IO" Name="Camera_Demo_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Camera_Demo_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Camera_Demo_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Camera_Demo_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="Camera_Demo_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Camera_Demo_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Camera_Demo_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Camera_Demo_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Camera_Demo_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Camera_Demo.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Camera_Demo_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Camera_Demo_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Camera_Demo_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Camera_Demo.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Camera_Demo_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Camera_Demo_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Camera_Demo_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Camera_Demo_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Camera_Demo_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Camera_Demo_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Camera_Demo_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Camera_Demo.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Camera_Demo_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Camera_Demo_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Camera_Demo_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Camera_Demo_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Camera_Demo_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Camera_Demo_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="Camera_Demo_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Camera_Demo_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Camera_Demo_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Camera_Demo_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Camera_Demo_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Camera_Demo_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Camera_Demo_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Camera_Demo_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="Camera_Demo_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Camera_Demo_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Camera_Demo_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="Camera_Demo_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="Camera_Demo_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="Camera_Demo_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Camera_Demo_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Camera_Demo_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Camera_Demo_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Camera_Demo_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Camera_Demo_methodology_drc_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Camera_Demo_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Camera_Demo_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Camera_Demo_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Camera_Demo_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Camera_Demo_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Camera_Demo.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Camera_Demo_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Camera_Demo.rbt"/>
+  <File Type="BITSTR-NKY" Name="Camera_Demo.nky"/>
+  <File Type="PDI-FILE" Name="Camera_Demo.pdi"/>
+  <File Type="RCFI_FILE" Name="Camera_Demo.rcfi"/>
+  <File Type="CFI_FILE" Name="Camera_Demo.cfi"/>
+  <File Type="RNPI_FILE" Name="Camera_Demo.rnpi"/>
+  <File Type="NPI_FILE" Name="Camera_Demo.npi"/>
+  <File Type="RBD_FILE" Name="Camera_Demo.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Camera_Demo.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Camera_Demo.sysdef"/>
+  <File Type="BG-BGN" Name="Camera_Demo.bgn"/>
+  <File Type="BG-DRC" Name="Camera_Demo.drc"/>
+  <File Type="RDI-RDI" Name="Camera_Demo.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Driver_Bayer_To_RGB.v">
@@ -158,15 +182,16 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="csi_to_axis_0"/>
   <BlockFileSet Type="BlockSrcs" Name="csi2_d_phy_rx_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="rgb2dvi_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Clk_Division_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rgb2dvi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="colorJudge_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RGB_To_HSV_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXIS_Data_RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="Driver_SK6805_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RAM_Line"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

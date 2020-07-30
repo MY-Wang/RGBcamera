@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 28 21:28:31 2020
-| Host         : DESKTOP-CBOB74N running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Jul 29 17:20:58 2020
+| Host         : LAPTOP-CHGNO6TI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Camera_Demo_methodology_drc_routed.rpt -pb Camera_Demo_methodology_drc_routed.pb -rpx Camera_Demo_methodology_drc_routed.rpx
 | Design       : Camera_Demo
 | Device       : xc7s15ftgb196-1
@@ -23,57 +23,77 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 69
-+-----------+----------+----------------------------------------------------+------------+
-| Rule      | Severity | Description                                        | Violations |
-+-----------+----------+----------------------------------------------------+------------+
-| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-6  | Warning  | No common primary clock between related clocks     | 6          |
-| TIMING-9  | Warning  | Unknown CDC Logic                                  | 1          |
-| TIMING-10 | Warning  | Missing property on synchronizer                   | 1          |
-| TIMING-14 | Warning  | LUT on the clock tree                              | 1          |
-| TIMING-18 | Warning  | Missing input or output delay                      | 7          |
-| TIMING-20 | Warning  | Non-clocked latch                                  | 48         |
-| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin          | 1          |
-| XDCB-5    | Warning  | Runtime inefficient way to find pin objects        | 1          |
-| REQP-1959 | Advisory | connects_SERDES_RST_driver_not_FF                  | 2          |
-+-----------+----------+----------------------------------------------------+------------+
+             Violations found: 100
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 8          |
+| TIMING-14 | Critical Warning | LUT on the clock tree                              | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
+| TIMING-10 | Warning          | Missing property on synchronizer                   | 1          |
+| TIMING-16 | Warning          | Large setup violation                              | 31         |
+| TIMING-18 | Warning          | Missing input or output delay                      | 7          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 48         |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-4#1 Warning
+TIMING-4#1 Critical Warning
 Invalid primary clock redefinition on a clock tree  
 Invalid clock redefinition on a clock tree. The primary clock MIPI_Trans_Driver/camera_clock/inst/clk_in1 is defined downstream of clock pclk and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
-TIMING-6#1 Warning
+TIMING-6#1 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out1_clk_wiz_0 and clk_out1_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_out1_clk_wiz_0_1]
 Related violations: <none>
 
-TIMING-6#2 Warning
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_out3_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_out3_clk_wiz_0_1]
+Related violations: <none>
+
+TIMING-6#3 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out1_clk_wiz_0_1 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0_1] -to [get_clocks clk_out1_clk_wiz_0]
 Related violations: <none>
 
-TIMING-6#3 Warning
+TIMING-6#4 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0_1 and clk_out3_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0_1] -to [get_clocks clk_out3_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#5 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out2_clk_wiz_0 and clk_out2_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0] -to [get_clocks clk_out2_clk_wiz_0_1]
 Related violations: <none>
 
-TIMING-6#4 Warning
+TIMING-6#6 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out2_clk_wiz_0_1 and clk_out2_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0_1] -to [get_clocks clk_out2_clk_wiz_0]
 Related violations: <none>
 
-TIMING-6#5 Warning
+TIMING-6#7 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out3_clk_wiz_0 and clk_out3_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out3_clk_wiz_0] -to [get_clocks clk_out3_clk_wiz_0_1]
 Related violations: <none>
 
-TIMING-6#6 Warning
+TIMING-6#8 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out3_clk_wiz_0_1 and clk_out3_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out3_clk_wiz_0_1] -to [get_clocks clk_out3_clk_wiz_0]
+Related violations: <none>
+
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.BUFGCTRL_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock MIPI_Trans_Driver/camera_clock/inst/clk_in1 is created on an inappropriate internal pin MIPI_Trans_Driver/camera_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -86,9 +106,159 @@ Missing property on synchronizer
 One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
 Related violations: <none>
 
-TIMING-14#1 Warning
-LUT on the clock tree  
-The LUT MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.BUFGCTRL_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -11.707 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -13.379 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -15.102 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -16.901 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -17.892 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -18.069 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -18.192 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -18.251 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -18.399 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -18.415 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -18.489 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -18.510 ns between U0/inst/HSV_Dividend_H_reg[14]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_H_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -18.747 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -4.372 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[8]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -4.501 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -4.516 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -4.555 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -4.566 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -4.567 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -4.589 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -4.618 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[4]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -4.648 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[10]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -4.660 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -4.673 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[12]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -4.713 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[11]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -4.730 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[9]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -4.771 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[13]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -4.796 ns between U0/inst/Reg_RGB_R_reg[4]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_Dividend_H_reg[14]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -6.106 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -7.780 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -9.702 ns between U0/inst/HSV_Divisior_S_reg[1]/C (clocked by clk_out1_clk_wiz_0_1) and U0/inst/HSV_S_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -366,25 +536,10 @@ Non-clocked latch
 The latch judge0/temp_reg[9] cannot be properly analyzed as its control pin judge0/temp_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-27#1 Warning
-Invalid primary clock on hierarchical pin  
-A primary clock MIPI_Trans_Driver/camera_clock/inst/clk_in1 is created on an inappropriate internal pin MIPI_Trans_Driver/camera_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '7' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: d:/xilinx/RGBcamera/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
-Related violations: <none>
-
-REQP-1959#1 Advisory
-connects_SERDES_RST_driver_not_FF  
-MIPI_Trans_Driver/Data_Read/U0/bits_gen[0].line_if_inst/ISERDESE2_inst: The RST pin should only be driven by a Flip-flop.
-Related violations: <none>
-
-REQP-1959#2 Advisory
-connects_SERDES_RST_driver_not_FF  
-MIPI_Trans_Driver/Data_Read/U0/bits_gen[1].line_if_inst/ISERDESE2_inst: The RST pin should only be driven by a Flip-flop.
+Current XDC: f:/GitHub/RGBcamera/Camera+HSV+led/Camera_Demo.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
 Related violations: <none>
 
 

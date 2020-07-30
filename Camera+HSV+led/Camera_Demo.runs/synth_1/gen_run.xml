@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1595942724">
+<GenRun Id="synth_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1596014212">
   <File Type="PA-TCL" Name="Camera_Demo.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Camera_Demo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Camera_Demo_reports.tcl"/>
   <File Type="RDS-RDS" Name="Camera_Demo.vds"/>
   <File Type="RDS-UTIL" Name="Camera_Demo_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Camera_Demo_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Camera_Demo.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Camera_Demo_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Camera_Demo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Driver_Bayer_To_RGB.v">
@@ -108,11 +111,13 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="csi_to_axis_0"/>
   <BlockFileSet Type="BlockSrcs" Name="csi2_d_phy_rx_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="rgb2dvi_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Clk_Division_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rgb2dvi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="colorJudge_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RGB_To_HSV_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXIS_Data_RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="Driver_SK6805_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="RAM_Line"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>
